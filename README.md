@@ -1,1 +1,1 @@
-This code is used to visualize the difference between the normal average and dynamic predicting intermediate conditions for avoiding dynamic obstacles in real time 
+This code is used to visualize the difference between the normal average and dynamic predicting intermediate conditions for avoiding dynamic obstacles in real time. It shows a reduction of more than 25% which can vary related of how much further from the suppose obstacle.  
