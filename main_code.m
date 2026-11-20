@@ -115,8 +115,8 @@ config_all_dyn = solveTrajectoryIK(ik, eeName, ikWeights, jointAnglesHome, taskP
 if plotMode == 1
     methodLabels = {'Average Method', 'Dynamic Predicting Method'};
     configs = {config_all_avg, config_all_dyn};
-    taskPositions = {taskPos_total_avg, taskPos_total_dyn};     % Path AFTER changing (actual executed path)
-    nominalPositions = {taskPos_avg, taskPos_dyn};             % Path BEFORE changing (dotted line)
+    taskPositions = {taskPos_total_avg, taskPos_total_dyn};     
+    nominalPositions = {taskPos_avg, taskPos_dyn};            
     animateRobotTrajectories(puma, trajTimes_total, configs, taskPositions, nominalPositions, ...
         waypoints, newSecondPoint, methodLabels, {'b', 'r'});
 end
