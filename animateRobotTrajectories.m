@@ -1,30 +1,7 @@
 function animateRobotTrajectories(robot, trajTimes, configs, taskPositions, nominalPositions, waypoints, detourPoint, methodLabels, colors)
 
-    if ~iscell(configs)
-        configs = {configs};
-    end
-    if ~iscell(taskPositions)
-        taskPositions = {taskPositions};
-    end
-    if nargin >= 5 && ~isempty(nominalPositions) && ~iscell(nominalPositions)
-        nominalPositions = {nominalPositions};
-    end
 
     numMethods = numel(configs);
-
-   
-    if nargin < 8 || isempty(methodLabels)
-        methodLabels = arrayfun(@(x) sprintf('Method %d', x), 1:numMethods, 'UniformOutput', false);
-    elseif ischar(methodLabels)
-        methodLabels = {methodLabels};
-    end
-
-    if nargin < 9 || isempty(colors)
-        defaultColors = {'b', 'r', 'g', 'm', 'c'};
-        colors = defaultColors(1:min(numMethods, numel(defaultColors)));
-    elseif ischar(colors)
-        colors = {colors};
-    end
 
     numSteps = numel(trajTimes);
     homeConfig = robot.homeConfiguration;
